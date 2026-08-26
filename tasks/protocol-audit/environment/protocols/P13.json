@@ -1,0 +1,41 @@
+{
+  "analyst_note": "Stratify by sector, hold groups together, calibrate on 2019-2020.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "company_id",
+    "salt": "tb3-p13-17",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Sector-stratified group holdout, calendar window",
+  "nested": null,
+  "protocol_id": "P13",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": {
+    "key": "sector",
+    "method": "within each stratum, order the assignment units by (hash bucket, unit id as text) ascending, then take the first ceil(n_units * train_below / 100) as train and the rest as calibration; a unit appearing in more than one stratum is assigned once per stratum"
+  },
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2019, 2020]"
+    },
+    "evaluation": {
+      "period_index": ">= 26"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

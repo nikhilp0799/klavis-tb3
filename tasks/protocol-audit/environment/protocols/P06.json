@@ -1,0 +1,49 @@
+{
+  "analyst_note": "Drop redundant filings so related entities cannot recur, then split by company.",
+  "dedup": {
+    "columns": [
+      "cogs_to_revenue_pct",
+      "sganda_to_revenue_pct",
+      "rnd_to_revenue_pct"
+    ],
+    "keep": "first",
+    "order_by": [
+      "company_id",
+      "period_index"
+    ],
+    "round_decimals": 1
+  },
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "company_id",
+    "salt": "tb3-p06",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Deduplicated company holdout",
+  "nested": null,
+  "protocol_id": "P06",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

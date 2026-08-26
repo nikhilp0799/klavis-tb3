@@ -1,0 +1,54 @@
+{
+  "analyst_note": "Outer group holdout, then an inner calibration split that also holds groups together.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-p09",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Nested calibration, grouped inner split",
+  "nested": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-inner",
+    "stage": "inner calibration split of the OUTER TRAIN companies only",
+    "train_below": 75
+  },
+  "protocol_id": "P09",
+  "recipe_type": "nested",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

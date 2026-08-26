@@ -1,0 +1,50 @@
+{
+  "analyst_note": "Drop redundant filings, then hold whole filer groups out.",
+  "dedup": {
+    "columns": [
+      "cogs_to_revenue_pct",
+      "sganda_to_revenue_pct",
+      "rnd_to_revenue_pct"
+    ],
+    "keep": "first",
+    "order_by": [
+      "company_id",
+      "period_index"
+    ],
+    "round_decimals": 1
+  },
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-p11",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Deduplicated group holdout",
+  "nested": null,
+  "protocol_id": "P11",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

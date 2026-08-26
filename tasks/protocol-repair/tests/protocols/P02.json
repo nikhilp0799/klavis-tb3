@@ -1,0 +1,37 @@
+{
+  "analyst_note": "Split companies by a stable hash of the company id.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "company_id",
+    "salt": "tb3-p02",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Company-level holdout",
+  "nested": null,
+  "protocol_id": "P02",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

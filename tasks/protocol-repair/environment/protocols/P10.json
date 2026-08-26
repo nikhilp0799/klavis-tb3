@@ -1,0 +1,42 @@
+{
+  "analyst_note": "Train on six sectors and calibrate on the rest.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "by_value",
+    "calibration_values": [
+      "Industrials",
+      "Materials",
+      "Real Estate",
+      "Technology",
+      "Transport",
+      "Utilities"
+    ],
+    "key": "sector",
+    "train_values": [
+      "Communication Services",
+      "Consumer Discretionary",
+      "Consumer Staples",
+      "Energy",
+      "Financials",
+      "Healthcare"
+    ]
+  },
+  "folds": null,
+  "name": "Sector holdout",
+  "nested": null,
+  "protocol_id": "P10",
+  "recipe_type": "by_value",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

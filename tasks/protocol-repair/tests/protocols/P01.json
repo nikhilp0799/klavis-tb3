@@ -1,0 +1,38 @@
+{
+  "analyst_note": "Hold whole filer groups out; calibrate on 2018-2019.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-p01",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Filer-group holdout",
+  "nested": null,
+  "protocol_id": "P01",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2018, 2019]"
+    },
+    "evaluation": {
+      "period_index": ">= 28"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

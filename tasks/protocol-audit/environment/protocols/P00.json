@@ -1,0 +1,38 @@
+{
+  "analyst_note": "Hold groups out, calibrate on 2019-2020, evaluate on the tail.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-p00",
+    "train_below": 70
+  },
+  "folds": null,
+  "name": "Calendar-window holdout (worked example)",
+  "nested": null,
+  "protocol_id": "P00",
+  "recipe_type": "entity_hash",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": {
+    "calibration": {
+      "fiscal_year": "in [2019, 2020]"
+    },
+    "evaluation": {
+      "period_index": ">= 26"
+    },
+    "train": {
+      "period_index": "<= 19"
+    }
+  }
+}

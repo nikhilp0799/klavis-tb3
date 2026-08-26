@@ -1,0 +1,53 @@
+{
+  "analyst_note": "Two expanding folds with a longer calibration window.",
+  "dedup": null,
+  "entity_split": {
+    "assignment": "hash_bucket",
+    "group_key": "filer_group",
+    "hash": {
+      "digest_slice": "hexdigest()[:8]",
+      "encoding": "utf-8",
+      "function": "sha256",
+      "input": "<salt>:<assignment_unit_id>",
+      "modulus": 100,
+      "rule": "bucket < train_below -> train; else -> calibration",
+      "to_int": "base 16"
+    },
+    "key": "filer_group",
+    "salt": "tb3-p16",
+    "train_below": 70
+  },
+  "folds": [
+    {
+      "calibration": {
+        "period_index": "in [16, 21]"
+      },
+      "evaluation": {
+        "period_index": "in [20, 23]"
+      },
+      "fold": 1,
+      "train": {
+        "period_index": "<= 15"
+      }
+    },
+    {
+      "calibration": {
+        "period_index": "in [24, 29]"
+      },
+      "evaluation": {
+        "period_index": "in [28, 31]"
+      },
+      "fold": 2,
+      "train": {
+        "period_index": "<= 23"
+      }
+    }
+  ],
+  "name": "Expanding-window backtest, wide calibration",
+  "nested": null,
+  "protocol_id": "P15",
+  "recipe_type": "expanding_window",
+  "row_filter": null,
+  "stratify": null,
+  "temporal_split": null
+}
