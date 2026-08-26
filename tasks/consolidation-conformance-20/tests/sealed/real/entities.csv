@@ -1,0 +1,21 @@
+entity_id,name,currency,parent_id,parent_ownership_pct,ledger_file,format
+E00,Group Parent Plc,USD,,100,ledger_E00.csv,functional
+E01,Holdco Europe,EUR,E00,100,ledger_E01.csv,geographic
+E02,Holdco UK,GBP,E00,100,ledger_E02.csv,costcenter
+E03,Ops Germany,EUR,E01,100,ledger_E03.csv,natural
+E04,Ops France,EUR,E01,80,ledger_E04.csv,functional
+E05,Ops Britain,GBP,E02,100,ledger_E05.csv,geographic
+E06,Ops Scotland,GBP,E02,75,ledger_E06.csv,costcenter
+E07,Manufacturing US,USD,E00,100,ledger_E07.csv,natural
+E08,Manufacturing MX,USD,E00,60,ledger_E08.csv,functional
+E09,Shared Services EU,EUR,E01,100,ledger_E09.csv,geographic
+E10,Shared Services UK,GBP,E02,100,ledger_E10.csv,costcenter
+E11,Treasury Center,USD,E00,100,ledger_E11.csv,natural
+E12,Distribution DE,EUR,E03,100,ledger_E12.csv,functional
+E13,Distribution FR,EUR,E04,100,ledger_E13.csv,geographic
+E14,Distribution UK,GBP,E05,100,ledger_E14.csv,costcenter
+E15,R&D Center,EUR,E01,100,ledger_E15.csv,natural
+E16,IP Holding,USD,E00,100,ledger_E16.csv,functional
+E17,Logistics US,USD,E07,100,ledger_E17.csv,geographic
+E18,Retail DE,EUR,E12,90,ledger_E18.csv,costcenter
+E19,Retail UK,GBP,E14,100,ledger_E19.csv,natural

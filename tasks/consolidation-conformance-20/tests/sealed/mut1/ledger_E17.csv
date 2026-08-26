@@ -1,0 +1,16 @@
+region_account,description,amount,drcr,party
+R-17-OPEX,Operating costs,4110,DR,EXTERNAL
+R-17-ICREC,Amounts due from group,3425.0,DR,DISTRIBUTION_DE
+R-17-ICREC,Amounts due from group,2055.0,DR,DISTRIBUTION_DE
+R-17-ICREC,Amounts due from group,1370.0,DR,DISTRIBUTION_DE
+R-17-ICREV,Group recharge income,3425.0,CR,DISTRIBUTION_DE
+R-17-ICREV,Group recharge income,2055.0,CR,DISTRIBUTION_DE
+R-17-ICREV,Group recharge income,1370.0,CR,DISTRIBUTION_DE
+R-17-ICREC,Amounts due from group,4110.0,DR,DISTRIBUTION_UK
+R-17-ICREC,Amounts due from group,2466.0,DR,DISTRIBUTION_UK
+R-17-ICREC,Amounts due from group,1644.0,DR,DISTRIBUTION_UK
+R-17-ICREV,Group recharge income,4110.0,CR,DISTRIBUTION_UK
+R-17-ICREV,Group recharge income,2466.0,CR,DISTRIBUTION_UK
+R-17-ICREV,Group recharge income,1644.0,CR,DISTRIBUTION_UK
+R-17-CASH,Bank,4110,CR,EXTERNAL
+R-17-EQ,Reserves,0.0,CR,EXTERNAL

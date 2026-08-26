@@ -28,13 +28,18 @@ succeeds everywhere it is precise, *is* the law stated as data.
 
 ## The validated artifacts
 
-The campaign's product is five original TB3 tasks — **uncheatable, deterministic,
+The campaign's product is six original TB3 tasks — **uncheatable, deterministic,
 TB3-grade** — that survive the discipline the finding demands: honest grading,
 no hidden facts, byte-stable answer keys, and a `/cheat` that scores 0. Both
 frontier models solve them cleanly; that is the finding **confirmed**, not a
 shortfall. The two flagships match the census hard-class shape — a
 built/repaired artifact, a large verifier surface, and a second orthogonal gate —
-and are the closest a fully-specified task gets to the wall.
+and are the closest a fully-specified task gets to the wall. The sixth,
+`consolidation-conformance-20`, is the production-scale capstone: a task built to
+maximum honest load — twenty entities, three currencies, four ledger formats,
+circular intercompany, cascaded minority interest — that both models nonetheless
+solve, the campaign's sharpest confirmation that coupled entanglement is volume,
+not irreducibility.
 
 | task | domain | shape |
 |---|---|---|
@@ -43,6 +48,7 @@ and are the closest a fully-specified task gets to the wall.
 | protocol-audit | Operations/Finance | classify 15 validation-split specs (sound/contaminated + mechanism + evidence) |
 | bitemporal-asof | Operations/Finance | as-of resolution over valid × knowledge axes (Q2 semantics) |
 | margin-interval-cal | Operations/Finance | prediction intervals under a two-gate (coverage + width) hidden-holdout verifier |
+| consolidation-conformance-20 | Quant Finance / Data Engineering | 20-entity multi-currency consolidation; conformance + intercompany elimination + cascaded minority interest, invariant-graded |
 
 ## Results (post spec-hardening; harbor jobs on this machine)
 
@@ -53,14 +59,17 @@ and are the closest a fully-specified task gets to the wall.
 | protocol-audit | 1.0 (18-52-07) | 0.0 (23 19-09-47) | 0.0 | 1.0 (19-09-30) | 1.0 (19-09-19) |
 | bitemporal-asof | 1.0 (18-52-39) | 0.0 (24 01-34-26) | 0.0 | 1.0 (19-16-54) | 1.0 (19-12-46) |
 | margin-interval-cal | 1.0 (18-53-10) | 0.0 (23 14-47-40) | 0.0 | 1.0 (19-19-41) | 1.0 (19-14-06) |
+| consolidation-conformance-20 | 1.0 | 0.0 | 0.0 | **3/3** (13-43-11, 14-03-07, 14-14-55) | **3/3** (14-23-03, 14-30-37, 14-37-46) |
 
 ¹ Opus cleared ledger-repair on four runs (adding 18-43-16); three are cited.
 
 Every 0 in the cheat column is a scripted adversary: for protocol-repair a
 correct audit plus **hardcoded** repair dumps (caught by the perturbation gate);
 for ledger-repair a **select-only fix** that leaves the prefix bug intact
-(caught by the out-of-order traces). Neither can reach a passing score without
-the actual correct work.
+(caught by the out-of-order traces); for consolidation-conformance-20 a
+**hardcoded** real-data answer that passes the real dataset but the two sealed
+mutated datasets defeat. None can reach a passing score without the actual
+correct work.
 
 Full reward index for all cited jobs: [results/rewards.md](results/rewards.md).
 

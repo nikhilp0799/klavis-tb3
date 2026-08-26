@@ -1,0 +1,12 @@
+account,account_name,debit,credit,counterparty
+6000,Operating costs,630,0,EXTERNAL
+1200,Amounts due from group,4410.0,0,E03
+4900,Group recharge income,0,4410.0,E03
+1200,Amounts due from group,3780.0,0,E04
+4900,Group recharge income,0,3780.0,E04
+1200,Amounts due from group,4410.0,0,E05
+4900,Group recharge income,0,4410.0,E05
+1200,Amounts due from group,2520.0,0,E06
+4900,Group recharge income,0,2520.0,E06
+1000,Bank,0,630,EXTERNAL
+3000,Reserves,0,0,EXTERNAL

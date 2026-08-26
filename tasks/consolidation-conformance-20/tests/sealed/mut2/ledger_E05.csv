@@ -1,0 +1,26 @@
+region_account,description,amount,drcr,party
+R-05-SALES,Sales to third parties,14175.0,CR,EXTERNAL
+R-05-SALES,Sales to third parties,8505.0,CR,EXTERNAL
+R-05-SALES,Sales to third parties,5670.0,CR,EXTERNAL
+R-05-OPEX,Operating costs,6930,DR,EXTERNAL
+R-05-COGS,Cost of sales,11340,DR,EXTERNAL
+R-05-ICPAY,Amounts due to group,1736.22,CR,IP_HOLDING
+R-05-ICPAY,Amounts due to group,1041.73,CR,IP_HOLDING
+R-05-ICPAY,Amounts due to group,694.49,CR,IP_HOLDING
+R-05-ICEXP,Group recharge cost,1736.22,DR,IP_HOLDING
+R-05-ICEXP,Group recharge cost,1041.73,DR,IP_HOLDING
+R-05-ICEXP,Group recharge cost,694.49,DR,IP_HOLDING
+R-05-ICPAY,Amounts due to group,868.11,CR,TREASURY_CENTER
+R-05-ICPAY,Amounts due to group,520.87,CR,TREASURY_CENTER
+R-05-ICPAY,Amounts due to group,347.24,CR,TREASURY_CENTER
+R-05-ICEXP,Group recharge cost,868.11,DR,TREASURY_CENTER
+R-05-ICEXP,Group recharge cost,520.87,DR,TREASURY_CENTER
+R-05-ICEXP,Group recharge cost,347.24,DR,TREASURY_CENTER
+R-05-ICPAY,Amounts due to group,1041.73,CR,SHARED_SERVICES_UK
+R-05-ICPAY,Amounts due to group,625.04,CR,SHARED_SERVICES_UK
+R-05-ICPAY,Amounts due to group,416.69,CR,SHARED_SERVICES_UK
+R-05-ICEXP,Group recharge cost,1041.73,DR,SHARED_SERVICES_UK
+R-05-ICEXP,Group recharge cost,625.04,DR,SHARED_SERVICES_UK
+R-05-ICEXP,Group recharge cost,416.69,DR,SHARED_SERVICES_UK
+R-05-CASH,Bank,10080,DR,EXTERNAL
+R-05-EQ,Reserves,0.0,CR,EXTERNAL

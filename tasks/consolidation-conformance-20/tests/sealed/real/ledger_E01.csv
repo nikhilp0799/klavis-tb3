@@ -1,0 +1,10 @@
+region_account,description,amount,drcr,party
+R-01-OPEX,Operating costs,3000,DR,EXTERNAL
+R-01-ICPAY,Amounts due to group,4090.91,CR,GROUP_PARENT_PLC
+R-01-ICPAY,Amounts due to group,2454.55,CR,GROUP_PARENT_PLC
+R-01-ICPAY,Amounts due to group,1636.36,CR,GROUP_PARENT_PLC
+R-01-ICEXP,Group recharge cost,4090.91,DR,GROUP_PARENT_PLC
+R-01-ICEXP,Group recharge cost,2454.55,DR,GROUP_PARENT_PLC
+R-01-ICEXP,Group recharge cost,1636.36,DR,GROUP_PARENT_PLC
+R-01-CASH,Bank,3000,CR,EXTERNAL
+R-01-EQ,Reserves,0.0,CR,EXTERNAL

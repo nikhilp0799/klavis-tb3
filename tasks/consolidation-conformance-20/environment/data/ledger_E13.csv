@@ -1,0 +1,14 @@
+region_account,description,amount,drcr,party
+R-13-SALES,Sales to third parties,24000.0,CR,EXTERNAL
+R-13-SALES,Sales to third parties,14400.0,CR,EXTERNAL
+R-13-SALES,Sales to third parties,9600.0,CR,EXTERNAL
+R-13-OPEX,Operating costs,8000,DR,EXTERNAL
+R-13-COGS,Cost of sales,24000,DR,EXTERNAL
+R-13-ICPAY,Amounts due to group,9090.91,CR,MANUFACTURING_MX
+R-13-ICPAY,Amounts due to group,5454.55,CR,MANUFACTURING_MX
+R-13-ICPAY,Amounts due to group,3636.36,CR,MANUFACTURING_MX
+R-13-ICEXP,Group recharge cost,9090.91,DR,MANUFACTURING_MX
+R-13-ICEXP,Group recharge cost,5454.55,DR,MANUFACTURING_MX
+R-13-ICEXP,Group recharge cost,3636.36,DR,MANUFACTURING_MX
+R-13-CASH,Bank,16000,DR,EXTERNAL
+R-13-EQ,Reserves,0.0,CR,EXTERNAL

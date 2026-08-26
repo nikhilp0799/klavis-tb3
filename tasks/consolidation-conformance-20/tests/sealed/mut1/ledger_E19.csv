@@ -1,0 +1,14 @@
+gl_account,memo,amount_dr,amount_cr,related_party
+Revenue,E19-001,0,44525.0,EXTERNAL
+Revenue,E19-002,0,26715.0,EXTERNAL
+Revenue,E19-003,0,17810.0,EXTERNAL
+OperatingExpense,E19-004,15070,0,EXTERNAL
+CostOfSales,E19-005,45210,0,EXTERNAL
+IntercoPayable,E19-006,0,11326.77,GBP-14
+IntercoPayable,E19-007,0,6796.06,GBP-14
+IntercoPayable,E19-008,0,4530.71,GBP-14
+IntercoExpense,E19-009,11326.77,0,GBP-14
+IntercoExpense,E19-010,6796.06,0,GBP-14
+IntercoExpense,E19-011,4530.71,0,GBP-14
+Cash,E19-012,28770,0,EXTERNAL
+Equity,E19-013,0,0,EXTERNAL

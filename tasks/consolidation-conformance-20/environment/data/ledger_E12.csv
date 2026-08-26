@@ -1,0 +1,12 @@
+account,account_name,debit,credit,counterparty
+4000,Sales to third parties,0,60000,EXTERNAL
+6000,Operating costs,9000,0,EXTERNAL
+5000,Cost of sales,30000,0,EXTERNAL
+2200,Amounts due to group,0,20000.0,E07
+6300,Group recharge cost,20000.0,0,E07
+2200,Amounts due to group,0,4545.45,E17
+6300,Group recharge cost,4545.45,0,E17
+1200,Amounts due from group,16363.64,0,E18
+4900,Group recharge income,0,16363.64,E18
+1000,Bank,21000,0,EXTERNAL
+3000,Reserves,0,0,EXTERNAL

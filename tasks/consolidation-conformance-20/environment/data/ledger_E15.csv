@@ -1,0 +1,4 @@
+gl_account,memo,amount_dr,amount_cr,related_party
+OperatingExpense,E15-001,7000,0,EXTERNAL
+Cash,E15-002,0,7000,EXTERNAL
+Equity,E15-003,0,0,EXTERNAL

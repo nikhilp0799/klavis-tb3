@@ -1,0 +1,28 @@
+region_account,description,amount,drcr,party
+R-09-OPEX,Operating costs,8220,DR,EXTERNAL
+R-09-ICREC,Amounts due from group,8718.18,DR,SHARED_SERVICES_UK
+R-09-ICREC,Amounts due from group,5230.91,DR,SHARED_SERVICES_UK
+R-09-ICREC,Amounts due from group,3487.27,DR,SHARED_SERVICES_UK
+R-09-ICREV,Group recharge income,8718.18,CR,SHARED_SERVICES_UK
+R-09-ICREV,Group recharge income,5230.91,CR,SHARED_SERVICES_UK
+R-09-ICREV,Group recharge income,3487.27,CR,SHARED_SERVICES_UK
+R-09-ICPAY,Amounts due to group,8718.18,CR,TREASURY_CENTER
+R-09-ICPAY,Amounts due to group,5230.91,CR,TREASURY_CENTER
+R-09-ICPAY,Amounts due to group,3487.27,CR,TREASURY_CENTER
+R-09-ICEXP,Group recharge cost,8718.18,DR,TREASURY_CENTER
+R-09-ICEXP,Group recharge cost,5230.91,DR,TREASURY_CENTER
+R-09-ICEXP,Group recharge cost,3487.27,DR,TREASURY_CENTER
+R-09-ICREC,Amounts due from group,2490.91,DR,OPS_GERMANY
+R-09-ICREC,Amounts due from group,1494.55,DR,OPS_GERMANY
+R-09-ICREC,Amounts due from group,996.36,DR,OPS_GERMANY
+R-09-ICREV,Group recharge income,2490.91,CR,OPS_GERMANY
+R-09-ICREV,Group recharge income,1494.55,CR,OPS_GERMANY
+R-09-ICREV,Group recharge income,996.36,CR,OPS_GERMANY
+R-09-ICREC,Amounts due from group,2179.55,DR,OPS_FRANCE
+R-09-ICREC,Amounts due from group,1307.73,DR,OPS_FRANCE
+R-09-ICREC,Amounts due from group,871.81,DR,OPS_FRANCE
+R-09-ICREV,Group recharge income,2179.55,CR,OPS_FRANCE
+R-09-ICREV,Group recharge income,1307.73,CR,OPS_FRANCE
+R-09-ICREV,Group recharge income,871.81,CR,OPS_FRANCE
+R-09-CASH,Bank,8220,CR,EXTERNAL
+R-09-EQ,Reserves,0.0,CR,EXTERNAL
