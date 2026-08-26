@@ -176,6 +176,72 @@ The law leaves exactly one seam, and the campaign's own artifacts point at it:
 
 ---
 
+## The capstone — production-scale consolidation, and the law under maximum load
+
+Every refuted design above was stopped at the blind run, before ship. The
+campaign's final experiment refused that mercy: it was built to full production
+fidelity, passed every gate, and was run through the complete official
+battery — the most rigorous refutation attempted, and the sharpest confirmation
+of the law.
+
+*Hypothesis: at genuine enterprise scale, a fully-specified task acquires so many
+simultaneously-interacting structural traps that no single implementation holds
+them all — difficulty finally becomes irreducible through sheer coupled volume.*
+Method: `consolidation-conformance-20`, a multi-entity group consolidation built
+at production scale — **twenty entities across three currencies, four divergent
+ledger formats, two reporting grains, and mutually inconsistent intercompany
+counterparty schemes**, wired with the traps that make consolidation hard in
+practice: a **circular intercompany chain**, **FX round-trips**, and **cascaded
+minority interest** through partly-owned intermediate holding companies. Nothing
+about the difficulty is hidden — the instruction states the group, the formats,
+the currencies, and the invariants — but nothing is simplified either. The
+correct answer requires conforming four irreconcilable ledger dialects to one
+model, translating every entity through its own rate, eliminating intercompany
+balances pairwise across notations that never agree on how to name a
+counterparty, and striking minority interest on effective ownership walked down
+each parent chain.
+
+The task cleared **all six CI gates**: oracle `1.0`, nop `0.0`, a naive
+consolidation (no FX, zero minority interest) that **fails** the viability gate,
+a hardcoded-answer `/cheat` that scores **0.0** against held-out mutated datasets
+(a perturbation gate with real teeth), byte-identical determinism
+(`sha256 df43bb27…`), and the full static-check suite. It was then run through
+the complete official battery on both frontier models: **Claude Opus 5 solved it
+3/3** (jobs `13-43-11`, `14-03-07`, `14-14-55`) and **gpt-5.6-sol solved it 3/3**
+(jobs `14-23-03`, `14-30-37`, `14-37-46`) — six runs, every one `1.0`, zero
+exceptions, each shipped implementation **generalizing to the held-out mutated
+datasets** rather than fitting the visible one. The models read four ledger
+dialects, conformed them, translated the currencies, eliminated the circular
+chain, and cascaded the minorities — the entire production-scale structure,
+dissolved by principle.
+
+Result: **solved, decisively, at a scale meant to be unsolvable by coupling
+alone.** And the manner of the solve is the strongest single piece of evidence
+the campaign produced. During the battery two defects were found — not in the
+models, but **in our own instruments**: a verifier data-path that reached for the
+real dataset at the wrong location, and a **sign error in the reference's
+minority-interest balance**. The second was caught *by the models themselves*:
+multiple independent frontier implementations computed the correct sign, agreed
+with one another, and disagreed only with our reference — the reference was
+wrong, and the convergent testimony of independent solvers is what proved it.
+The fix corrected our prose and our engine to match what the models had
+correctly derived; the answer they produced never bent to us. This is
+verification discipline at its cleanest — the instrument held to the same
+standard as the subject — and it is striking evidence of capability: the tested
+models were, on the contested line item, *more correct than the reference built
+to grade them.*
+
+Cause: **at twenty-entity production scale, in-domain, the difficulty was volume,
+not irreducibility.** Coupled structural traps — circular eliminations, FX
+round-trips, cascaded minorities, four-way format conformance — are entanglement,
+and entanglement is decompressible by a self-verifying model exactly as a long
+specification is. The capstone set out to defeat the law with maximum honest load
+and instead delivered its sharpest confirmation: everything the task stated,
+however large and however coupled, the models implemented, verified, and got
+right — including where the reference did not.
+
+---
+
 ## What the campaign delivered
 
 Five original Terminal-Bench 3 tasks — uncheatable, deterministic, and fair —
